@@ -25,8 +25,8 @@ final class Airport: Model, @unchecked Sendable {
     @Field(key: "name")
     var name: String
     
-    @Field(key: "alternate_names")
-    var alternateNames: [String]
+    @OptionalField(key: "alternate_names")
+    var alternateNames: [String]?
     
     @Field(key: "latitude")
     var latitude: Double
@@ -41,7 +41,7 @@ final class Airport: Model, @unchecked Sendable {
         
     }
     
-    init(id: UUID? = nil, iata: String? = nil, icao: String, name: String, alternateNames: [String], latitude: Double, longitude: Double, remarks: String? = nil) {
+    init(id: UUID? = nil, iata: String? = nil, icao: String, name: String, alternateNames: [String]? = nil, latitude: Double, longitude: Double, remarks: String? = nil) {
         self.id = id
         self.iata = iata
         self.icao = icao
@@ -57,7 +57,7 @@ final class Airport: Model, @unchecked Sendable {
               iata: self.iata,
               icao: self.icao,
               name: self.name,
-              alternateNames: self.alternateNames,
+              alternateNames: self.alternateNames ?? [],
               latitude: self.latitude,
               longitude: self.longitude,
               remarks: self.remarks)
