@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/madisonlhw/KoukuukiAPI.git",
       "state" : {
-        "revision" : "d90ddd783edcbc6691bc56bad3faf9dbacc06af4",
-        "version" : "1.0.5"
+        "revision" : "0f35fe30b0905c9bfa5a0104f74445c5550333f2",
+        "version" : "1.0.7"
       }
     },
     {

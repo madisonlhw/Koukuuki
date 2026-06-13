@@ -25,6 +25,9 @@ final class AircraftTypeCode: Model, @unchecked Sendable {
     @Field(key: "defaultModel")
     var defaultModel: String
     
+    @Children(for: \.$typeCode)
+    var variants: [AircraftTypeCodeVariant]
+    
     init() {
         
     }

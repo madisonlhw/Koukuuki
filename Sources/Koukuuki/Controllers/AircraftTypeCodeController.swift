@@ -21,6 +21,9 @@ struct AircraftTypeCodeController: RouteCollection {
             typeCode.patch(use: update)
             typeCode.delete(use: delete)
         }
+        
+        try typeCodes.grouped(":typeCodeID")
+            .register(collection: AircraftTypeCodeVariantController())
     }
     
     @Sendable

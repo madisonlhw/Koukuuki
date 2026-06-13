@@ -12,3 +12,6 @@ import KoukuukiAPI
 extension AircraftTypeCodeResponseDTO: @retroactive Content {}
 extension AircraftTypeCodeCreateDTO: @retroactive Content {}
 extension AircraftTypeCodeUpdateDTO: @retroactive Content {}
+extension AircraftTypeCodeVariantResponseDTO: @retroactive Content {}
+extension AircraftTypeCodeVariantCreateDTO: @retroactive Content {}
+extension AircraftTypeCodeVariantUpdateDTO: @retroactive Content {}
