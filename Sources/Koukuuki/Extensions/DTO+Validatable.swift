@@ -36,6 +36,42 @@ extension AircraftTypeCodeUpdateDTO: @retroactive Validatable {
     }
 }
 
+extension AirlineCreateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("iata",
+                        as: String.self,
+                        is: .count(2...2) && .characterSet(.uppercaseLetters.union(.decimalDigits)),
+                        required: false)
+        
+        validations.add("icao",
+                        as: String.self,
+                        is: .count(3...5) && .characterSet(.uppercaseLetters))
+        
+        validations.add("country",
+                        as: String.self,
+                        is: .count(2...2) && .characterSet(.uppercaseLetters))
+    }
+}
+
+extension AirlineUpdateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("iata",
+                        as: String.self,
+                        is: .count(2...2) && .characterSet(.uppercaseLetters.union(.decimalDigits)),
+                        required: false)
+        
+        validations.add("icao",
+                        as: String.self,
+                        is: .count(3...5) && .characterSet(.uppercaseLetters),
+                        required: false)
+        
+        validations.add("country",
+                        as: String.self,
+                        is: .count(2...2) && .characterSet(.uppercaseLetters),
+                        required: false)
+    }
+}
+
 extension AirportCreateDTO: @retroactive Validatable {
     public static func validations(_ validations: inout Validations) {
         validations.add("icao",
