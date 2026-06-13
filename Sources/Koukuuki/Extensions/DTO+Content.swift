@@ -9,6 +9,9 @@
 import Vapor
 import KoukuukiAPI
 
+extension AircraftIntakeResponseDTO: @retroactive Content {}
+extension AircraftIntakeCreateDTO: @retroactive Content {}
+extension AircraftIntakeUpdateDTO: @retroactive Content {}
 extension AircraftTypeCodeResponseDTO: @retroactive Content {}
 extension AircraftTypeCodeCreateDTO: @retroactive Content {}
 extension AircraftTypeCodeUpdateDTO: @retroactive Content {}

@@ -11,6 +11,7 @@ func routes(_ app: Application) throws {
     }
 
     //try app.register(collection: TodoController())
+    try app.register(collection: AircraftIntakeController())
     try app.register(collection: AircraftTypeCodeController())
     try app.register(collection: AirlineController())
     try app.register(collection: AirportController())

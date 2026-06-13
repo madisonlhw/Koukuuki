@@ -19,6 +19,23 @@ extension Validator where T == Double {
     }
 }
 
+extension AircraftIntakeCreateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("airportCode",
+                        as: String.self,
+                        is: .count(3...4) && .characterSet(.uppercaseLetters.union(.decimalDigits)))
+    }
+}
+
+extension AircraftIntakeUpdateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("airportCode",
+                        as: String.self,
+                        is: .count(3...4) && .characterSet(.uppercaseLetters.union(.decimalDigits)),
+                        required: false)
+    }
+}
+
 extension AircraftTypeCodeCreateDTO: @retroactive Validatable {
     public static func validations(_ validations: inout Validations) {
         validations.add("designator",
@@ -76,7 +93,7 @@ extension AirportCreateDTO: @retroactive Validatable {
     public static func validations(_ validations: inout Validations) {
         validations.add("icao",
                         as: String.self,
-                        is: .count(4...4) && .characterSet(.uppercaseLetters))
+                        is: .count(3...4) && .characterSet(.uppercaseLetters.union(.decimalDigits)))
         
         validations.add("iata",
                         as: String.self,
@@ -97,7 +114,7 @@ extension AirportUpdateDTO: @retroactive Validatable {
     public static func validations(_ validations: inout Validations) {
         validations.add("icao",
                         as: String.self,
-                        is: .count(4...4) && .characterSet(.uppercaseLetters),
+                        is: .count(3...4) && .characterSet(.uppercaseLetters.union(.decimalDigits)),
                         required: false)
         
         validations.add("iata",

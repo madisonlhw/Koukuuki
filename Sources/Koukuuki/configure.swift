@@ -18,6 +18,7 @@ public func configure(_ app: Application) async throws {
     ), as: .psql)
 
     //app.migrations.add(CreateTodo())
+    app.migrations.add(CreateAircraftIntake())
     app.migrations.add(CreateAircraftTypeCode())
     app.migrations.add(CreateAircraftTypeCodeVariant())
     app.migrations.add(CreateAirline())
