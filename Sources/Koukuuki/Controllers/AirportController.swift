@@ -21,6 +21,9 @@ struct AirportController: RouteCollection {
             airport.patch(use: update)
             airport.delete(use: delete)
         }
+        
+        try airports.grouped(":airportID")
+            .register(collection: SpottingLocationController())
     }
     
     @Sendable

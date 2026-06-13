@@ -37,6 +37,9 @@ final class Airport: Model, @unchecked Sendable {
     @OptionalField(key: "remarks")
     var remarks: String?
     
+    @Children(for: \.$airport)
+    var spottingLocations: [SpottingLocation]
+    
     init() {
         
     }

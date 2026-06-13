@@ -21,6 +21,7 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateAircraftTypeCode())
     app.migrations.add(CreateAircraftTypeCodeVariant())
     app.migrations.add(CreateAirport())
+    app.migrations.add(CreateSpottingLocation())
 
     // register routes
     try routes(app)

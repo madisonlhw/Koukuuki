@@ -81,4 +81,28 @@ extension AirportUpdateDTO: @retroactive Validatable {
     }
 }
 
+extension SpottingLocationCreateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("latitude",
+                        as: Double.self,
+                        is: .latitudeValidator)
+        
+        validations.add("longitude",
+                        as: Double.self,
+                        is: .longitudeValidator)
+    }
+}
 
+extension SpottingLocationUpdateDTO: @retroactive Validatable {
+    public static func validations(_ validations: inout Validations) {
+        validations.add("latitude",
+                        as: Double.self,
+                        is: .latitudeValidator,
+                        required: false)
+        
+        validations.add("longitude",
+                        as: Double.self,
+                        is: .longitudeValidator,
+                        required: false)
+    }
+}

@@ -18,3 +18,6 @@ extension AircraftTypeCodeVariantUpdateDTO: @retroactive Content {}
 extension AirportResponseDTO: @retroactive Content {}
 extension AirportCreateDTO: @retroactive Content {}
 extension AirportUpdateDTO: @retroactive Content {}
+extension SpottingLocationResponseDTO: @retroactive Content {}
+extension SpottingLocationCreateDTO: @retroactive Content {}
+extension SpottingLocationUpdateDTO: @retroactive Content {}
