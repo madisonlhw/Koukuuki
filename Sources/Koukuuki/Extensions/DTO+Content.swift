@@ -15,3 +15,6 @@ extension AircraftTypeCodeUpdateDTO: @retroactive Content {}
 extension AircraftTypeCodeVariantResponseDTO: @retroactive Content {}
 extension AircraftTypeCodeVariantCreateDTO: @retroactive Content {}
 extension AircraftTypeCodeVariantUpdateDTO: @retroactive Content {}
+extension AirportResponseDTO: @retroactive Content {}
+extension AirportCreateDTO: @retroactive Content {}
+extension AirportUpdateDTO: @retroactive Content {}

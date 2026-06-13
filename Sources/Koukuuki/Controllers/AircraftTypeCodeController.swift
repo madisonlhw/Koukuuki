@@ -45,6 +45,7 @@ struct AircraftTypeCodeController: RouteCollection {
     
     @Sendable
     func create(req: Request) async throws -> AircraftTypeCodeResponseDTO {
+        try AircraftTypeCodeCreateDTO.validate(content: req)
         let dto = try req.content.decode(AircraftTypeCodeCreateDTO.self)
         let typeCode = dto.toModel()
         try await typeCode.save(on: req.db)
@@ -59,6 +60,7 @@ struct AircraftTypeCodeController: RouteCollection {
             throw Abort(.notFound)
         }
         
+        try AircraftTypeCodeUpdateDTO.validate(content: req)
         let dto = try req.content.decode(AircraftTypeCodeUpdateDTO.self)
         dto.apply(to: typeCode)
         try await typeCode.update(on: req.db)
