@@ -1,5 +1,5 @@
 {
-  "originHash" : "dbe22648f61b982ea64e9e0cd48c7d69dd0217918878b552a9ebd9d74cac5ab5",
+  "originHash" : "b65b2e5399298c1dc37185469ab254fad03df3ad4042cfefa6d5f33783b2ac36",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -56,12 +56,30 @@
       }
     },
     {
+      "identity" : "jwt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor/jwt.git",
+      "state" : {
+        "revision" : "af1c59762d70d1065ddbc0d7902ea9b3dacd1a26",
+        "version" : "5.1.2"
+      }
+    },
+    {
+      "identity" : "jwt-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor/jwt-kit.git",
+      "state" : {
+        "revision" : "2033b3e661238dda3d30e36a2d40987499d987de",
+        "version" : "5.2.0"
+      }
+    },
+    {
       "identity" : "koukuukiapi",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/madisonlhw/KoukuukiAPI",
+      "location" : "https://github.com/madisonlhw/KoukuukiAPI.git",
       "state" : {
-        "revision" : "84702a4ec723467a87838eac04a94d39fc178454",
-        "version" : "1.0.1"
+        "revision" : "d90ddd783edcbc6691bc56bad3faf9dbacc06af4",
+        "version" : "1.0.5"
       }
     },
     {
